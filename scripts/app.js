@@ -2,9 +2,22 @@ let numberInput = document.querySelector('#numberInput');
 
 numberInput.addEventListener('input', () => {
     const number = parseInt(numberInput.value);
-    if (number <= -10 || number >= 10) {
-        alert('The number should be between -10 and 10');
-    }
+
+if(number >= 10) {
+    numberInput.value = 10;
+    alert('The number should be between -10 and 10');
+    return;
+}
+if(number <= -10) {
+    numberInput.value = -10;
+    alert('The number should be between -10 and 10');
+    return;
+}
+
+    // if (number <= -10 || number >= 10) {
+    //     alert('The number should be between -10 and 10');
+
+    // }
 });
 
 const fruit = {
